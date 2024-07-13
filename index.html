@@ -1,78 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="/style.css">
-  </head>
-  <body>
-    <header>
-      <div class="nav-container">
-        <nav>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Max Gibson - AI & Web Developer Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Max Gibson, an innovative tech entrepreneur and AI developer specializing in web services and AI solutions.">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
+  <header class="bg-gray-800 text-white py-4 fixed w-full top-0 z-50">
+    <div class="container">
+      <nav>
+        <ul class="flex justify-center">
+          <li class="mx-4"><a href="#home"
+              class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Home</a></li>
+          <li class="mx-4"><a href="#about"
+              class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">About</a></li>
+          <li class="mx-4"><a href="#skills"
+              class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Skills</a></li>
+          <li class="mx-4"><a href="#projects"
+              class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Projects</a></li>
+          <li class="mx-4"><a href="#contact"
+              class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-16">
+    <section id="home" class="hero">
+      <div class="container">
+        <h1 class="text-5xl mb-2">Max Gibson</h1>
+        <h2 class="text-3xl mb-4">AI & Web Developer</h2>
+        <p class="text-xl mb-8">Innovative tech entrepreneur specializing in AI solutions and web services</p>
+        <img src="/profile.png" alt="Max Gibson" class="profile-pic">
+        <div class="mt-8">
+          <a href="#projects" class="btn btn-primary mr-4">View My Work</a>
+          <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+        </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section id="home">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Front-End Developer | HTML | CSS | JavaScript</p>
-        <img src="/profile.png" alt="Profile Picture" class="profile-pic">
-      </section>
+    <section id="about" class="py-16 bg-white dark:bg-gray-800">
+      <div class="container">
+        <h2 class="text-3xl font-semibold mb-8">About Me</h2>
+        <p class="text-lg mb-8">With over 14 years of experience in web services and AI solutions, I bring innovation
+          and strategic thinking to every project. My expertise spans AI development, full-stack web development, and
+          organizational leadership.</p>
+        <div class="about-details">
+          <div class="detail">
+            <i class="fas fa-globe text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Languages</h3>
+            <p>Hebrew, English</p>
+          </div>
+          <div class="detail">
+            <i class="fas fa-graduation-cap text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Education</h3>
+            <p>B.S. in Computer Science, San Diego State University</p>
+          </div>
+          <div class="detail">
+            <i class="fas fa-certificate text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Certifications</h3>
+            <ul class="list-disc pl-5">
+              <li>Generative AI: Introduction and Applications</li>
+              <li>Introduction to Artificial Intelligence (AI)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="about">
-        <h2>About Me</h2>
-        <p>Contact: +1 (623) 263 1967 (Work) | Max@ApexWebServices.com</p>
-        <p><a href="https://www.linkedin.com/in/moshehbenavraham">LinkedIn</a> | <a href="https://ApexWebServices.com">Company</a></p>
-        <p>Top Skills: AI, Art, Prompt Engineering, Midjourney</p>
-        <p>Languages: Hebrew, English</p>
-        <h3>Certifications</h3>
-        <ul>
-          <li>Generative AI: Introduction and Applications</li>
-          <li>Introduction to Artificial Intelligence (AI)</li>
-        </ul>
-        <h3>Summary</h3>
-        <p>Innovative tech entrepreneur and nonprofit leader with over 14 years of experience in web services and AI solutions...</p>
-        <h3>Core Competencies</h3>
-        <ul>
-          <li>AI & Automation</li>
-          <li>AI Developer</li>
-          <li>Full Stack Developer</li>
-          <li>Low-Code Developer</li>
-          <li>Web Design / Hosting</li>
-          <li>Organizational Leadership</li>
-          <li>Strategic Thinking</li>
-          <li>Fundraising</li>
-        </ul>
-        <h3>Education</h3>
-        <p>Bachelor's Degree in Computer Science from San Diego State University</p>
-      </section>
+    <section id="skills" class="py-16 bg-gray-100 dark:bg-gray-900">
+      <div class="container">
+        <h2 class="text-3xl font-semibold mb-8">Core Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <i class="fas fa-robot text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold">AI & Automation</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold">Full Stack Development</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-paint-brush text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold">Web Design</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-server text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold">Web Hosting</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-users text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold">Organizational Leadership</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-chart-line text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold">Strategic Thinking</h3>
+          </div>
+          <div class="skill">
+            <i class="fas fa-hand-holding-usd text-4xl text-[var(--primary-color)] mb-4"></i>
+            <h3 class="text-xl font-semibold">Fundraising</h3>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <!-- Interactive project showcase will go here -->
-        <img src="/project1.jpg" alt="Project 1" class="project-image">
-        <img src="/project2.jpg" alt="Project 2" class="project-image">
-      </section>
+    <section id="projects" class="py-16 bg-white dark:bg-gray-800">
+      <div class="container">
+        <h2 class="text-3xl font-semibold mb-8 pb-2 border-b-2 border-[var(--primary-color)] inline-block">Featured
+          Projects</h2>
+        <div class="project-grid">
+          <div class="project">
+            <img src="/project1.webp" alt="AI-Driven Web Application" class="project-image">
+            <div class="project-content">
+              <h3 class="text-xl font-semibold mb-2">AI-Driven Web Application</h3>
+              <p class="mb-4">A cutting-edge web application leveraging AI for personalized user experiences.</p>
+              <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+            </div>
+          </div>
+          <div class="project">
+            <img src="/project2.webp" alt="Automated Workflow System" class="project-image">
+            <div class="project-content">
+              <h3 class="text-xl font-semibold mb-2">Automated Workflow System</h3>
+              <p class="mb-4">An efficient system designed to streamline business processes using AI and automation.</p>
+              <a href="#" class="btn btn-primary mt-auto">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
+    <section id="contact" class="py-16 bg-gray-100 dark:bg-gray-900">
+      <div class="container">
+        <h2 class="text-3xl font-semibold mb-8">Get in Touch</h2>
+        <p class="text-lg mb-8">Interested in collaborating or have a project in mind? Let's connect!</p>
+        <div class="contact-info">
+          <p class="mb-4"><i class="fas fa-phone mr-2 text-[var(--primary-color)]"></i> +1 (623) 263 1967</p>
+          <p class="mb-4"><i class="fas fa-envelope mr-2 text-[var(--primary-color)]"></i> Max@ApexWebServices.com</p>
+          <p class="mb-4"><i class="fab fa-linkedin mr-2 text-[var(--primary-color)]"></i> <a
+              href="https://www.linkedin.com/in/moshehbenavraham" class="hover:text-[var(--primary-color)]">LinkedIn
+              Profile</a></p>
+          <p class="mb-4"><i class="fas fa-globe mr-2 text-[var(--primary-color)]"></i> <a
+              href="https://ApexWebServices.com" class="hover:text-[var(--primary-color)]">ApexWebServices.com</a></p>
+        </div>
         <!-- Contact form will go here -->
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <p>&copy; 2024 My Portfolio</p>
-    </footer>
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2024 Max Gibson. All rights reserved.</p>
+    </div>
+  </footer>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
