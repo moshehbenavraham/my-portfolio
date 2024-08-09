@@ -208,6 +208,134 @@ Here's a breakdown of this `package.json` file:
 
 This `package.json` file describes a project that appears to be a personal portfolio website. It uses Vite as the build tool and development server, incorporates Tailwind CSS for styling, and includes GSAP for animations. The project is set up to use modern JavaScript features (ES modules) and is configured for a development workflow with separate scripts for development, building, and previewing the production build.
 
+## File: .eslintrc.json
+
+# ESLint Configuration (.eslintrc.json)
+
+The `.eslintrc.json` file is a configuration file for ESLint, a popular JavaScript linting tool. It defines the rules and settings that ESLint uses to analyze your code for potential errors, style violations, and bad practices. Here's a breakdown of each section in our `.eslintrc.json` file:
+
+```json
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "rules": {
+  }
+}
+```
+
+## Environment (env)
+
+- `"browser": true`: This tells ESLint that your code is intended to run in a browser environment. It enables browser-specific global variables and functions.
+- `"es2021": true`: This enables ES2021 global variables and automatically sets the ECMAScript version to 12.
+
+## Extends
+
+- `"eslint:recommended"`: This applies a set of core rules recommended by ESLint. These rules catch common problems and errors in JavaScript code.
+- `"plugin:prettier/recommended"`: This enables the integration of Prettier with ESLint. It turns off all ESLint rules that might conflict with Prettier and enables the prettier plugin.
+
+## Parser Options
+
+- `"ecmaVersion": 12`: This specifies that the code should be parsed according to ECMAScript 2021 syntax.
+- `"sourceType": "module"`: This indicates that your code uses ECMAScript modules (import/export syntax).
+
+## Rules
+
+The `"rules"` section is currently empty, allowing you to add custom rules or override existing ones as needed. For example, you could add:
+
+```json
+"rules": {
+  "no-console": "warn",
+  "indent": ["error", 2]
+}
+```
+
+This would warn about `console.log` statements and enforce 2-space indentation.
+
+By using this ESLint configuration, your project ensures:
+
+1. Code is checked for potential errors and bad practices.
+2. The codebase maintains a consistent style, integrating with Prettier for formatting.
+3. Modern JavaScript features (up to ES2021) are supported.
+4. The code is written with browser compatibility in mind.
+
+This configuration helps maintain code quality, reduces potential bugs, and ensures a consistent coding style across your project.
+
+## File: .prettierrc
+
+# Prettier Configuration (.prettierrc)
+
+The `.prettierrc` file is a configuration file for Prettier, an opinionated code formatter. It specifies how your code should be formatted, ensuring consistency across your entire project. Here's a breakdown of each option in our `.prettierrc` file:
+
+```json
+{
+  "semi": true,
+  "tabWidth": 2,
+  "printWidth": 100,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "jsxBracketSameLine": true
+}
+```
+
+## Options Explained
+
+1. `"semi": true`
+   - This option ensures that semicolons are added at the end of statements.
+   - Example: `const greeting = "Hello";`
+
+2. `"tabWidth": 2`
+   - Sets the number of spaces per indentation level.
+   - This means each level of indentation will use 2 spaces.
+
+3. `"printWidth": 100`
+   - Specifies the line length where Prettier will try to wrap code.
+   - Lines of code will attempt to wrap at 100 characters.
+
+4. `"singleQuote": true`
+   - Uses single quotes instead of double quotes for string literals.
+   - Example: `const name = 'John'` instead of `const name = "John"`
+
+5. `"trailingComma": "es5"`
+   - Adds trailing commas wherever possible when multi-line, as long as it's valid ES5.
+   - Applies to objects, arrays, etc.
+   - Example:
+     ```javascript
+     const obj = {
+       a: 1,
+       b: 2,
+     };
+     ```
+
+6. `"jsxBracketSameLine": true`
+   - Puts the `>` of a multi-line JSX element at the end of the last line instead of alone on the next line.
+   - Example:
+     ```jsx
+     <button
+       className="btn"
+       onClick={handleClick}>
+       Click me
+     </button>
+     ```
+
+This Prettier configuration ensures:
+
+1. Consistent use of semicolons and quotes throughout the project.
+2. Readable line lengths and indentation.
+3. Modern JavaScript/ES5 compatible trailing comma usage.
+4. Compact JSX syntax for multi-line elements.
+
+By using this Prettier configuration, your project maintains a consistent and clean code style, improving readability and reducing potential conflicts in version control due to formatting differences.
+
 --------
 
 EoF

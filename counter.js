@@ -17,3 +17,5 @@ export function setupCounter(element) {
   // Initialize the counter display with a starting value of 0
   setCounter(0)
 }
+
+// EoF
