@@ -1,39 +1,58 @@
 /* Tailwind Directives */
+/* These lines import Tailwind CSS's base styles, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* Custom styles */
+/* @layer is used to add custom styles to Tailwind's layers */
 @layer base {
+  /* :root defines CSS variables (custom properties) that can be used throughout the stylesheet */
   :root {
     --primary-color: #646cff;
     --secondary-color: #535bf2;
+    text-size-adjust: 100%;
   }
 
+  /* Styles for the body element */
   body {
+    /* @apply is a Tailwind directive that lets you use utility classes in custom CSS */
     @apply min-h-screen flex flex-col;
+    text-size-adjust: 100%; /* Ensure text-size-adjust is applied to the body */
+  }
+
+  /* Styles for anchor tags and buttons */
+  a, button {
+    -webkit-tap-highlight-color: transparent; /* This line is for webkit browsers */
   }
 }
 
+/* Component styles */
 @layer components {
+  /* .container class for layout control */
   .container {
     @apply w-full max-w-6xl mx-auto px-4;
   }
 
+  /* Base button styles */
   .btn {
     @apply inline-block py-2 px-4 rounded font-medium uppercase transition duration-300 ease-in-out;
   }
 
+  /* Primary button styles */
   .btn-primary {
     @apply bg-[var(--primary-color)] text-white hover:bg-opacity-90 hover:-translate-y-0.5 hover:shadow-md;
   }
 
+  /* Secondary button styles */
   .btn-secondary {
     @apply bg-transparent text-white border-2 border-white hover:bg-white hover:text-[var(--primary-color)] hover:-translate-y-0.5 hover:shadow-md;
   }
 }
 
+/* Utility classes for specific elements and sections */
 @layer utilities {
+  /* Hero section styles */
   .hero {
     @apply text-center py-24 bg-[var(--primary-color)] text-white;
   }
@@ -46,10 +65,12 @@
     @apply text-3xl mb-4;
   }
 
+  /* Profile picture styles */
   .profile-pic {
     @apply w-48 h-48 rounded-full mx-auto my-8 border-4 border-white shadow-lg;
   }
 
+  /* About section styles */
   .about-details {
     @apply flex flex-wrap justify-between mt-8;
   }
@@ -58,6 +79,7 @@
     @apply flex-1 min-w-[calc(33.333%-2rem)] m-4 p-6 bg-white rounded-lg shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg dark:bg-gray-800;
   }
 
+  /* Skills section styles */
   .skills-grid {
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8;
   }
@@ -66,6 +88,7 @@
     @apply text-center p-8 bg-white rounded-lg shadow-md transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg dark:bg-gray-800;
   }
 
+  /* Project section styles */
   .project-grid {
     @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8;
   }
@@ -87,49 +110,68 @@
     /* This ensures the button stays at the bottom */
   }
 
+  /* Contact section styles */
   .contact-info {
     @apply flex flex-col items-center mt-8;
   }
 }
 
 /* Dark mode adjustments */
+/* This media query applies styles when the user's system is set to dark mode */
 @media (prefers-color-scheme: dark) {
+  /* Redefine CSS variables for dark mode */
   :root {
-    --background-color: #242424;
-    --text-color: rgba(255, 255, 255, 0.87);
+    --background-color: #242424; /* Dark background color */
+    --text-color: rgba(255, 255, 255, 0.87); /* Light text color with slight transparency */
   }
 
+  /* Apply dark mode styles to the body */
   body {
     @apply bg-[var(--background-color)] text-[var(--text-color)];
+    /* This sets the background and text color using the variables defined above */
   }
 
+  /* Adjust the primary button style for dark mode */
   .btn-primary {
     @apply bg-[var(--primary-color)] text-white hover:bg-opacity-90;
+    /* This keeps the button visible in dark mode and adds a hover effect */
   }
 }
 
 /* Styles that don't have direct Tailwind equivalents */
+/* These styles are for icons within detail and skill elements */
 .detail i,
 .skill i {
   @apply text-3xl text-[var(--primary-color)] mb-4;
+  /* This makes icons large, colored, and adds some bottom margin */
 }
 
+/* Header styles */
 header {
   @apply bg-gray-800 text-white py-4 fixed w-full top-0 z-50;
+  /* This creates a dark, full-width header that stays at the top of the page */
 }
 
+/* Navigation styles */
 nav ul {
   @apply flex justify-center;
+  /* This centers the navigation items horizontally */
 }
 
 nav ul li {
   @apply mx-4;
+  /* This adds horizontal spacing between navigation items */
 }
 
 nav ul li a {
   @apply font-medium py-2 px-4 rounded transition duration-300 ease-in-out hover:bg-white hover:bg-opacity-10;
+  /* This styles navigation links with padding, rounded corners, and a hover effect */
 }
 
+/* Footer styles */
 footer {
   @apply bg-gray-800 text-white text-center py-4 mt-auto;
+  /* This creates a dark footer that sticks to the bottom of the page */
 }
+
+/* EoF */
