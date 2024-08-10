@@ -31,32 +31,79 @@
 </head>
 
 <!-- The body tag contains all visible content of the webpage -->
+
 <body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
   <!-- Classes here set background and text colors for light and dark modes -->
 
   <header class="bg-gray-800 text-white py-4 fixed w-full top-0 z-50">
-    <!-- The header section, styled to be dark, full-width, and fixed at the top of the page -->
-    <div class="container">
-      <!-- A container to control the width of the content -->
-      <nav>
-        <!-- Navigation menu -->
-        <ul class="flex justify-center">
-          <!-- Unordered list for navigation items, centered horizontally -->
-          <li class="mx-4"><a href="#home"
+    <!-- 
+      This is the header section of the webpage.
+      bg-gray-800: Sets a dark background color
+      text-white: Makes the text color white
+      py-4: Adds padding to the top and bottom
+      fixed: Keeps the header fixed at the top of the page when scrolling
+      w-full: Makes the header span the full width of the screen
+      top-0: Positions the header at the very top
+      z-50: Ensures the header stays on top of other elements
+    -->
+    <div class="container mx-auto px-4">
+      <!-- 
+        This container helps control the width and horizontal positioning of the content.
+        mx-auto: Centers the container horizontally
+        px-4: Adds padding to the left and right sides
+      -->
+      <nav class="flex justify-between items-center">
+        <!-- 
+          The navigation bar, now using flexbox for layout.
+          flex: Enables flexbox layout
+          justify-between: Spreads out the child elements, pushing them to the edges
+          items-center: Vertically centers the child elements
+        -->
+        <button class="md:hidden" id="mobile-menu-button" aria-label="Toggle mobile menu">
+          <!-- 
+            This button is for the mobile menu, only visible on smaller screens.
+            md:hidden: Hides the button on medium-sized screens and larger
+          -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <!-- This SVG creates a "hamburger" icon for the mobile menu button -->
+        </button>
+        <ul class="hidden md:flex justify-center space-x-6">
+          <!-- 
+            The list of navigation items.
+            hidden: Hides the list by default (on mobile)
+            md:flex: Shows the list as a flex container on medium-sized screens and larger
+            justify-center: Centers the list items horizontally
+            space-x-6: Adds horizontal spacing between list items
+          -->
+          <li><a href="#home"
               class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Home</a></li>
-          <!-- List item with a link to the home section -->
-          <!-- Similar list items for other sections -->
-          <li class="mx-4"><a href="#about"
+          <li><a href="#about"
               class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">About</a></li>
-          <li class="mx-4"><a href="#skills"
+          <li><a href="#skills"
               class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Skills</a></li>
-          <li class="mx-4"><a href="#projects"
+          <li><a href="#projects"
               class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Projects</a></li>
-          <li class="mx-4"><a href="#contact"
+          <li><a href="#contact"
               class="hover:bg-white hover:bg-opacity-10 py-2 px-4 rounded transition duration-300">Contact</a></li>
+          <!-- 
+            Each list item contains a link to a section of the page.
+            hover:bg-white hover:bg-opacity-10: Creates a slight white background on hover
+            py-2 px-4: Adds padding around the link text
+            rounded: Rounds the corners of the hover effect
+            transition duration-300: Adds a smooth transition effect for hover
+          -->
         </ul>
       </nav>
     </div>
+    <!-- 
+      This is a placeholder element with the id "app". 
+      It acts as a container where JavaScript can dynamically insert content into the page. 
+      The JavaScript file will use this element to display additional HTML content when the page loads.
+    -->
+    <div id="app"></div>
+
   </header>
 
   <main class="pt-16">
@@ -72,7 +119,8 @@
         <!-- Subheading (job title) -->
         <p class="text-xl mb-8">Innovative tech entrepreneur specializing in AI solutions and web services</p>
         <!-- Brief description -->
-        <img src="/profile.png" alt="Max Gibson" class="profile-pic w-48 h-48 rounded-full mx-auto my-8 border-4 border-white shadow-lg">
+        <img src="/profile.png" alt="Max Gibson"
+          class="profile-pic w-48 h-48 rounded-full mx-auto my-8 border-4 border-white shadow-lg">
         <!-- Profile picture -->
         <div class="mt-8">
           <!-- Container for buttons -->

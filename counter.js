@@ -1,3 +1,7 @@
+// Note we aren't using the counter in this project
+
+/*
+
 // This function sets up a counter on a given HTML element
 export function setupCounter(element) {
   // Initialize a variable to keep track of the count
@@ -12,10 +16,12 @@ export function setupCounter(element) {
   }
 
   // Add a click event listener to the element
-  element.addEventListener('click', () => setCounter(counter + 1))
+  //element.addEventListener('click', () => setCounter(counter + 1))
 
   // Initialize the counter display with a starting value of 0
   setCounter(0)
 }
+
+*/
 
 // EoF
