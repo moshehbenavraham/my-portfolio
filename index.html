@@ -288,8 +288,28 @@
           <p class="mb-4"><i class="fas fa-globe mr-2 text-[var(--primary-color)]"></i> <a
               href="https://ApexWebServices.com" class="hover:text-[var(--primary-color)]">ApexWebServices.com</a></p>
           <!-- Website link with icon -->
-          <!-- Contact form will go here -->
-        </div>
+
+          <!-- Contact form with email delivery handled by FormSpree -->
+          <div id="contact-form">
+            <!-- We are using FormSpree to deliver the email -->
+            <form action="https://formspree.io/f/mrbzklwz" method="POST" class="space-y-4">
+              <label>
+                Your email:
+                <input type="email" name="email" class="mt-1 block w-full p-2 border rounded" placeholder="Your Email"
+                  required>
+              </label>
+              <label>
+                Your message:
+                <textarea name="message" class="mt-1 block w-full p-2 border rounded" placeholder="Your Message"
+                  required></textarea>
+              </label>
+
+              <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Send</button>
+            </form>
+
+          </div>
+          <!-- End of the contact form -->
+        </div> <!-- End of the contact info -->
       </div>
     </section>
 
